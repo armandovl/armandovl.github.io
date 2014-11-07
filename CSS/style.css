@@ -1,0 +1,99 @@
+body{
+	background-image: url('../img/background.png');
+	font-family: 'Roboto', sans-serif;
+	/* el ../ por cada nivel que quiera subir */
+	
+}
+#miperfil{
+	background-color: red;
+	width: 460px;
+	/* al borrar esto height: 500px; se ajusta al texto*/
+	position: absolute;
+	left: 50%;
+	/* se adapta al  cambiar 15 en ves de 50 top: 50%;*/
+	top: 15%;
+	/*margen a la izquierda la mitad de mi width*/
+	margin-left: -230px;
+	/* al borrar esto margin-top: -250px; se va para abajo */
+	/*para redondear los bordes*/
+	border-radius:  5px;
+	opacity: .9;
+	box-shadow: 0 3px 5px black; /*aqui va la sombra*/
+
+}
+#miperfil header{
+	background-color: white;
+	border-radius: 5px 5px 0 0;
+}
+
+#miperfil header .extracto {
+	padding: 30px 20px 30px 20px;
+	position: relative;
+
+}
+
+#miperfil header  .extracto img {
+	position: absolute;
+	right: -40px;
+	top:35px;
+	border:4px solid white ;
+	border-radius: 90px;
+}
+#miperfil header  .extracto h1 {
+	margin: 0;
+	font-size: 36px;
+	font-weight: 500;
+
+}
+#miperfil header  .extracto p {
+	margin: 0px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #666666;
+}
+#miperfil header nav ul {
+	list-style: none; /* quitar los puntos de la lista*/
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden; /*esto es para que se estire lo blanco*/
+}
+#miperfil header nav ul li {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	/*tambien se puede poner margin: 0 0 20px 20px; */
+}
+
+#miperfil header nav ul li a {
+	text-transform: uppercase; /*para hacerlo en mayuscula*/
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color:#333333; /*diseño de interacciones dinamara , universidad panamericana */
+	transition: color .5s ease;
+
+}
+
+
+
+
+#miperfil header nav ul li a:hover{ /*para cambiar a color rojo cuando pase el mouse por los link*/
+	color: red;
+}
+
+
+#miperfil header nav ul li.activo a {
+	color: #b4b6b8;
+}
+
+main .bio {
+	padding-left: 20px;
+	padding-right: 20px;
+	/*background-color: green;*/
+
+}
+main .bio p {
+	color:white;
+}
+	
+

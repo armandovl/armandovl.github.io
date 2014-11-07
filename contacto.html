@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Armando</title>
+	<meta charset= "utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet"  href="CSS/style.css">
+	<link rel="stylesheet"  href="CSS/conta_style.css">
+</head>
+<body>
+	<div id="miperfil">
+		<header>
+			<section class="extracto">
+
+				<h1>Armando Valdés</h1>
+				<p>Ing. Agrónomo Zootecnista</p>
+				<div class="avatar">
+				<!--alt es por si la imagen no se cargo va a poner el texto de que esta en at-->
+				<img src="img/foto1.jpg" width= "110px" height="110px" alt="Mi foto">
+				</div>
+			</section>
+
+			<nav>
+				<ul>
+					<li > <!-- clas activo para que se vea más clara cuando es seleccionada-->
+						<a href="index.html">Acerca de Mi </a>
+					</li>
+					<li>
+					<a href="links.html">links </a>
+					</li>
+					<li class= "activo">
+					<a href="contacto.html">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<form class="contacto">
+
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre">
+				<br>
+				<label for="email">Correo electrónico:</label>
+				<input type="email" id="email"> 
+				<br>
+				<label for="mensaje"> Mensaje</label>
+				<textarea id="mensaje" rows="7"> </textarea>
+				<input type="submit" value="Contactame!">
+
+				<br>
+			</form>
+		</main>
+
+	</div>
+	
+
+</body>
+</html>
+
