@@ -19,7 +19,7 @@
 	<!--aqui empieza la pagina de info-->
 	<div data-role="page" id="pagina1">
 		<div data-role="header" style="background-color:rgb(109,192,192)">
-		    <h3>Nombre de la APP</h3>
+		    <h3>Diagnóstico mediante <br>rx de torax</h3>
 		</div>
 		<div data-role="content" data-theme="d">
 		<br><br>
@@ -27,14 +27,14 @@
 		    <!--primero va el logo dentral-->
 		    <center>
 		        <div>
-		            <img src="img/logo-covid.png" width="175" style="border-radius:20px,">
+		            <img src="img/logo-covid.png" width="180" style="border-radius:15px">
 		        </div>
 
-		      <a href="#hacerTest" style="text-decoration: none;">
-             <span class="boton"> Botón </span>
-             </a>
-
 		     </center>
+
+		    <a href="#hacerTest" style="text-decoration: none;">
+             <span class="boton"> Ejecutar </span>
+             </a>
 
 
 		</div>
@@ -57,26 +57,25 @@
 			</div>
 			<div data-role="content">
 				<p>
-				Fecha: 24/03/2017<br>
-				Triglicéridos:284 <br>
-				Urea:41<br>
-				Creatinina: 1.2<br>
-				Glucosa: 87 <br>
-				Peso 95.7 kg<br>
-				Cintura 117<br>
-				Bíceps derecho 34 con esfuerzo 36<br>
-				Bíceps izquierdo 33 con esfuerzo 36<br>
-				Pierna derecha e izquierda 64<br>
-				Pecho 116<br>
-				Espalda 55<br>
+				Fecha: 12/02/2021<br>
+				Modelo: Transfer Learning <br>
+				Datos:
+				Convolutional Neural Networks<br>
+				Softmax 65 capas<br>
+				150 epochs<br>
+				Gradiente Descenciente<br>
+				Autor: Armando Valdés
+
 				</p>
 			</div>
 	</div>
     <!--aqui empieza la página de presion-->
     <div data-role="page" id="hacerTest" data-theme="b" >
-		<div data-theme="a" data-role="header">
+		<div data-role="header" style="background-color:rgb(109,192,192)">
+		    <h3>Diagnóstico mediante <br>rx de torax</h3>
 		</div>
-		<div  style="background-color: red; height:700px" >
+
+		<div  style="height:700px" >
 			<iframe src="http://armandovl.github.io/dxcovid.html"frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" ></iframe>
 		</div><!--data role content de presion-->
 	</div>
