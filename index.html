@@ -1,141 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
+	<!--Para identificar las "Ñ" y los acentos-->
+	 <meta charset="utf-8">
+	 <title>titulo pestana</title>
+	 <link rel="shortcut icon" href="img/rinon2.png" type="image/png" />
 
-  <meta charset="UTF-8">	
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO 8859-1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trabajo Final</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.css">
+	<!--Para que no se ajuste a la pantalla-->
+	<meta name="viewport" content="width=device-width,user=scalabel=no" />
+
+	<!--Con esto se cargan los estilos de Jquery mobile-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
+<body>
+	<!--aqui empieza la pagina de info-->
+	<div data-role="page" id="pagina1">
+		<div data-role="header" data-theme="b">
+		    <h3>Nombre de la APP</h3>
+		</div>
+		<div data-role="content" data-theme="d">
 
-<body ng-app="myApp" ng-cloak bgcolor="black" ng-controller="myCtrl" layout="column">
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <span>Test para Diagnosticar COVID-19 <br></span> 
-    </div>
-  </md-toolbar>
+		    <!--primero va el logo dentral-->
+		    <center>
+		        <div>
+		            <img src="img/logorinon.png" width="175" style="border-radius:15px">
+		        </div>
+		    </center>
 
-  <form name="myForm">
-    <md-card style="margin-bottom:0px">
-      <md-card-content>
-        <div style="margin-bottom:16px" layout="column" layout-align="center">
-          <span style="font-weight:bold;font-size:13">Seleccione imagen de RX de tórax:</span> <br>
-          <input type="file" name="file" ng-model="cn" class="form-control" onchange="loadFile(event)" accept=".jpg,.jpeg,.png" style="font-size:13">
-        </div>
+		    <br>
 
-        <div  layout="column" layout-align="space-between center">
-          <img id="imagen" class="img-responsive"/>
-        </div>
-      </md-card-content>
+		    <!--Una lista UL-->
+		   <ul data-role="listview" data-theme="d" >
 
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button ng-click="submit()" class="md-accent md-raised">Hacer test</md-button>
-      </md-card-actions>
-    </md-card>
-    </form>
-
-    <md-card layout="row" layout-align="center" style="margin-top:0px">
-      <md-card-content>
-        <div id="resultadosdiv" >
-            <div ng-show="success">
-                  <span style="color:blue;font-weight:bold">{: predictions[0].label :}</span>   <span style="color:blue">(score: {: predictions[0].score :})</span>
-            </div>
-            <div ng-show="error">
-                  <span style="color:red;font-weight:bold">Error!</span>
-            </div>
-            <div ng-show="loading">
-              <img src="https://images2.tcdn.com.br/commerce/assets/store/img//loading.gif" alt="Procesando" "">
-           </div>
-        </div>
-      </md-card-content>
-    </md-card>
-
-<br>
-<div><center>Armando Valdés<br> vala797@yahoo.com.mx <br>Data Science for Business <br> ITESM campus Santa Fe</center>
-</div>
+		        <!--tres li como secciones-->
+		        <li>
+		            <a href="#hacerTest" data-transition="pop"> <!--data-transition="slide"-->
+		                <img src="img/heart1.png" width="60" height="60">
+		                    <h3>Presión</h3>
+		                <p>
+		                    Presión y registro de actividad
+		                </p>
+		            </a>
+		        </li>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
-  <script>
-    var loadFile = function(event) {
-      var output = document.getElementById('imagen');
-      output.src = URL.createObjectURL(event.target.files[0]);
-      var x = document.getElementById("resultadosdiv");
-      x.style.display = "none";
-    };
-  </script>
-  <script>
-    var app = angular.module('myApp', ['ngMaterial']);
+		    </ul>
+		</div>
 
-    app.config(['$interpolateProvider', function($interpolateProvider) {
-      $interpolateProvider.startSymbol('{:');
-      $interpolateProvider.endSymbol(':}');
-    }]);
-
-    app.config(function($mdThemingProvider) {
-      $mdThemingProvider.theme('default')
-        .primaryPalette('blue-grey')
-        .accentPalette('orange');
-    });
-
-    app.controller('myCtrl', ['$scope', '$http',
-      function($scope, $http) {
-        $scope.rp = "http://35.202.227.16:5000";
-        $scope.loading = false;
-        $scope.success = false;
-      	$scope.error = false;
-
-        console.log("Loading ...");
-        console.log("Developed by Mirko J. Rodriguez");
-
-        $scope.submit = function() {
-          var x = document.getElementById("resultadosdiv");
-          x.style.display = "block";
-          $scope.loading = true;
-          $scope.success = false;
-        	$scope.error = false;
-
-          var myform = document.forms['myForm'];
-          var formData = new FormData(myform);
-          console.log(myform)
-
-          URI_final = $scope.rp + "/model/covid19/";
-          console.log(URI_final);
-          console.log("Calling ...");
-          $http({
-            method : 'POST',
-            url : URI_final,
-            headers: {
-                'Content-Type': undefined
-            },
-            data: formData
-          }).success(function(data, status, headers, config) {
-            $scope.predictions = data.predictions;
-            console.log(data.predictions);
-            $scope.loading = false;
-            $scope.success = true;
-          	$scope.error = false;
-          }).error(function(data, status, headers, config) {
-            $scope.loading = false;
-            $scope.success = false;
-            $scope.error = true;
-          });
-
-        }
-
-        console.log("Loaded!");
-      }
-    ]);
-  </script>
-
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+		    <ul>
+			    <li>
+			    	<a href="#pageinfo"  data-transition="pop" data-icon="info">Información</a> <!--quite este de arriba, ya no sirve data-rel="dialog"-->
+			    </li>
+				</ul>
+	    </div>
+		</div>
+	</div>
+	<!--aqui empieza la pagina de info-->
+	<!--agregue esto para abrir cuadro dialogo data-dialog="true"-->
+	<div data-role="page" id="pageinfo" data-dialog="true"> 
+			<div data-role="header">
+				<h3>Datos Inicio</h3>
+			</div>
+			<div data-role="content">
+				<p>
+				Fecha: 24/03/2017<br>
+				Triglicéridos:284 <br>
+				Urea:41<br>
+				Creatinina: 1.2<br>
+				Glucosa: 87 <br>
+				Peso 95.7 kg<br>
+				Cintura 117<br>
+				Bíceps derecho 34 con esfuerzo 36<br>
+				Bíceps izquierdo 33 con esfuerzo 36<br>
+				Pierna derecha e izquierda 64<br>
+				Pecho 116<br>
+				Espalda 55<br>
+				</p>
+			</div>
+	</div>
+    <!--aqui empieza la página de presion-->
+    <div data-role="page" id="hacerTest" data-theme="b" >
+		<div data-theme="a" data-role="header">
+		</div>
+		<div  style="background-color: red; height:500px" >
+			<iframe src="http://armandovl.github.io/dxcovid.html"frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" ></iframe>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div><!--data role content de presion-->
+	</div>
+	</div><!--aqui termina  pagina ejercicio-->
 
 </body>
 </html>
