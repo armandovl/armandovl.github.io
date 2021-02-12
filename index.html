@@ -18,17 +18,22 @@
 <body>
 	<!--aqui empieza la pagina de info-->
 	<div data-role="page" id="pagina1">
-		<div data-role="header" data-theme="b">
+		<div data-role="header" style="background-color:rgb(109,192,192)">
 		    <h3>Nombre de la APP</h3>
 		</div>
 		<div data-role="content" data-theme="d">
+		<br><br>
 
 		    <!--primero va el logo dentral-->
 		    <center>
 		        <div>
-		            <img src="img/logorinon.png" width="175" style="border-radius:15px">
+		            <img src="img/logo-covid.png" width="175" style="border-radius:20px,">
 		        </div>
-             <span href="#hacerTest" class="boton"> Botón </span>	</div>
+
+		      <a href="#hacerTest" style="text-decoration: none;">
+             <span class="boton"> Botón </span>
+             </a>
+
 		     </center>
 
 
@@ -99,6 +104,7 @@
   text-align: center;
   transition: all 0.2s ease 0s;
   width: 120px;
+
 }
 .boton:hover{
 	background: #0096f7;
