@@ -47,7 +47,7 @@
 	<div data-role="page" id="porcentajesPagina">
 		<div data-role="content">
 
-			<h4> Màximos (Armando, Ramon)</h4>
+			<h4> Máximos (Armando, Ramon)</h4>
 
 			<input type="text" id="maximo" value="" data-mini="true" placeholder="80,90">
 
@@ -66,7 +66,7 @@
 			function hacerCalculos(){
 
 				sacarLibrasLado();
-				//sacarKilos();
+				sacarKilos();
 				//sacarLibras();
 				alert("listo!!");
 
@@ -134,6 +134,13 @@
 
 				var maximo= document.getElementById('maximo').value;
 				var porcentajesTodos = document.getElementById('porcentajes').value;
+				
+				/*vamos a descomponer el maximo*/
+				//convertir valores a arreglo
+				var arregloMaximos= maximo.split(",")
+
+				var maximoArmando= arregloMaximos[0];
+				var maximoRamon=arregloMaximos[1];				
 
 
 				//convertir valores a arreglo
@@ -146,19 +153,30 @@
 				quintoPorcentaje=arregloPorcentajes[4];
 
 				
- 		        //haciendo los cálculos
-				var kilo1= (arregloPorcentajes[0]/100)*maximo;
-				var kilo2= (arregloPorcentajes[1]/100)*maximo;
-				var kilo3= (arregloPorcentajes[2]/100)*maximo;
-				var kilo4= (arregloPorcentajes[3]/100)*maximo;
-				var kilo5= (arregloPorcentajes[4]/100)*maximo;
+ 		        //haciendo los cálculos armando
+				var kilo1= (arregloPorcentajes[0]/100)*maximoArmando;
+				var kilo2= (arregloPorcentajes[1]/100)*maximoArmando;
+				var kilo3= (arregloPorcentajes[2]/100)*maximoArmando;
+				var kilo4= (arregloPorcentajes[3]/100)*maximoArmando;
+				var kilo5= (arregloPorcentajes[4]/100)*maximoArmando;
+
+ 		        //haciendo los cálculos armando
+				var kilo6= (arregloPorcentajes[0]/100)*maximoRamon;
+				var kilo7= (arregloPorcentajes[1]/100)*maximoRamon;
+				var kilo8= (arregloPorcentajes[2]/100)*maximoRamon;
+				var kilo9= (arregloPorcentajes[3]/100)*maximoRamon;
+				var kilo10= (arregloPorcentajes[4]/100)*maximoRamon;
+                
+
+
+
                 
                 //Iimprimiendo el resultado
-				document.getElementById("unoK").innerHTML = kilo1.toFixed(1);
-				document.getElementById("dosK").innerHTML = kilo2.toFixed(1);
-				document.getElementById("tresK").innerHTML = kilo3.toFixed(1);
-				document.getElementById("cuatroK").innerHTML = kilo4.toFixed(1);
-				document.getElementById("cincoK").innerHTML = kilo5.toFixed(1);
+				document.getElementById("unoK").innerHTML = kilo1.toFixed(1) + " Armando" +" - " + kilo6.toFixed(1)+ " Ramón" ;
+				document.getElementById("dosK").innerHTML = kilo2.toFixed(1) + " Armando" +" - " + kilo7.toFixed(1)+ " Ramón" ;
+				document.getElementById("tresK").innerHTML = kilo3.toFixed(1) + " Armando" +" - " + kilo8.toFixed(1)+ " Ramón" ;
+				document.getElementById("cuatroK").innerHTML = kilo4.toFixed(1) + " Armando" +" - " + kilo9.toFixed(1)+ " Ramón" ;
+				document.getElementById("cincoK").innerHTML = kilo5.toFixed(1) + " Armando" +" - " + kilo10.toFixed(1)+ " Ramón" ;
 
 		}
 
@@ -201,15 +219,15 @@
     <div data-role="collapsible">
     	<h1> Libras por Lado </h1>
     	<ul>
-    		<li>Primer Peso <p id="uno"> hola<p1></li>
-			<li>Segundo Peso <p id="dos"> hola<p1></li>
-			<li>Tercero Peso <p id="tres"> hola<p1></li>
-			<li>Cuarto Peso <p id="cuatro"> hola<p1></li>
-			<li>Quinto Peso <p id="cinco"> hola<p1></li>
+    		<li>Primer Peso <p id="uno"> - <p1></li>
+			<li>Segundo Peso <p id="dos"> - <p1></li>
+			<li>Tercer Peso <p id="tres"> - <p1></li>
+			<li>Cuarto Peso <p id="cuatro"> - <p1></li>
+			<li>Quinto Peso <p id="cinco"> - <p1></li>
     	</ul>
     </div>
 
-<!--
+
     <div data-role="collapsible">
     	<h1> Pesos en Kilos </h1>
     	<ul>
@@ -234,7 +252,7 @@
     	<br><br>
     </div>
 
--->
+
 </div>
 
 
