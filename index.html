@@ -47,9 +47,9 @@
 	<div data-role="page" id="porcentajesPagina">
 		<div data-role="content">
 
-			<h4> Escriba su máximo</h4>
+			<h4> Màximos (Armando, Ramon)</h4>
 
-			<input type="text" id="maximo" value="" data-mini="true">
+			<input type="text" id="maximo" value="" data-mini="true" placeholder="80,90">
 
 			<h4> Escriba sus porcentajes (hasta 5 pesos)</h4>
 
@@ -66,8 +66,8 @@
 			function hacerCalculos(){
 
 				sacarLibrasLado();
-				sacarKilos();
-				sacarLibras();
+				//sacarKilos();
+				//sacarLibras();
 				alert("listo!!");
 
 			}
@@ -77,8 +77,21 @@
 				//sacando los valores
 
 				var maximo= document.getElementById('maximo').value;
+
+				/*vamos a descomponer el maximo*/
+				//convertir valores a arreglo
+				var arregloMaximos= maximo.split(",")
+
+				var maximoArmando= arregloMaximos[0];
+				var maximoRamon=arregloMaximos[1];
+
+
+
+
+
 				var porcentajesTodos = document.getElementById('porcentajes').value;
-				var maximoLibras=maximo*2.205;
+				var maximoLibrasArmando=maximoArmando*2.205;
+				var maximoLibrasRamon=maximoRamon*2.205;
 
 
 
@@ -92,19 +105,27 @@
 				quintoPorcentaje=arregloPorcentajes[4];
 
 				
- 		        //haciendo los cálculos
-				var libraLado1= (((arregloPorcentajes[0]/100)*maximoLibras)-45)/2;
-				var libraLado2= (((arregloPorcentajes[1]/100)*maximoLibras)-45)/2;
-				var libraLado3= (((arregloPorcentajes[2]/100)*maximoLibras)-45)/2;
-				var libraLado4= (((arregloPorcentajes[3]/100)*maximoLibras)-45)/2;
-				var libraLado5= (((arregloPorcentajes[4]/100)*maximoLibras)-45)/2;
+ 		        //haciendo los cálculos para Armando
+				var libraLado1= (((arregloPorcentajes[0]/100)*maximoLibrasArmando)-45)/2;
+				var libraLado2= (((arregloPorcentajes[1]/100)*maximoLibrasArmando)-45)/2;
+				var libraLado3= (((arregloPorcentajes[2]/100)*maximoLibrasArmando)-45)/2;
+				var libraLado4= (((arregloPorcentajes[3]/100)*maximoLibrasArmando)-45)/2;
+				var libraLado5= (((arregloPorcentajes[4]/100)*maximoLibrasArmando)-45)/2;
+
+				//haciendo los cálculos para Ramon
+
+				var libraLado6= (((arregloPorcentajes[0]/100)*maximoLibrasRamon)-45)/2;
+				var libraLado7= (((arregloPorcentajes[1]/100)*maximoLibrasRamon)-45)/2;
+				var libraLado8= (((arregloPorcentajes[2]/100)*maximoLibrasRamon)-45)/2;
+				var libraLado9= (((arregloPorcentajes[3]/100)*maximoLibrasRamon)-45)/2;
+				var libraLado10= (((arregloPorcentajes[4]/100)*maximoLibrasRamon)-45)/2;
                 
                 //Iimprimiendo el resultado
-				document.getElementById("uno").innerHTML = libraLado1.toFixed(1);
-				document.getElementById("dos").innerHTML = libraLado2.toFixed(1);
-				document.getElementById("tres").innerHTML = libraLado3.toFixed(1);
-				document.getElementById("cuatro").innerHTML = libraLado4.toFixed(1);
-				document.getElementById("cinco").innerHTML = libraLado5.toFixed(1);
+				document.getElementById("uno").innerHTML = libraLado1.toFixed(1)+ " Armando" + " - " + libraLado6.toFixed(1) + " Ramón";
+				document.getElementById("dos").innerHTML = libraLado2.toFixed(1)+ " Armando" + " - " +libraLado7.toFixed(1) + " Ramón";
+				document.getElementById("tres").innerHTML = libraLado3.toFixed(1)+ " Armando" +" - " +  libraLado8.toFixed(1) + " Ramón";
+				document.getElementById("cuatro").innerHTML = libraLado4.toFixed(1)+ " Armando" +" - " +  libraLado9.toFixed(1) + " Ramón";
+				document.getElementById("cinco").innerHTML = libraLado5.toFixed(1)+ " Armando" +" - " + libraLado10.toFixed(1) + " Ramón";
 			}
 
 
@@ -188,6 +209,7 @@
     	</ul>
     </div>
 
+<!--
     <div data-role="collapsible">
     	<h1> Pesos en Kilos </h1>
     	<ul>
@@ -212,7 +234,7 @@
     	<br><br>
     </div>
 
-
+-->
 </div>
 
 
