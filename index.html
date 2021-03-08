@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Para identificar las "Ñ" y los acentos-->
+	 <meta charset="utf-8">
+	 <!--titulo de la pestaña-->
+	 <title>Cálculo porcentajes</title>
+	 <!-- Refrescar la página cada 10 segundos
+	   <meta http-equiv="refresh" content="5">-->
+	 <!--Colocar un icono-->
+	 <link rel="shortcut icon" href="img/pesas1.png" type="image/png" />
+
+	<!--Para que no se ajuste a la pantalla-->
+	<meta name="viewport" content="width=device-width,user=scalabel=no" />
+
+	<!--Con esto se cargan los estilos de Jquery mobile-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<!--aqui empieza la pagina-->
+	<div data-role="page" id="pagina1">
+		<div data-role="header" data-theme="b">
+		    <h3>Cálculo Porcentajes</h3>
+		</div>
+		<div data-role="content" data-theme="d">
+
+		    <!--primero va el logo dentral-->
+		    <center>
+		        <div>
+		            <img src="img/pesas2.png" width="300" style="border-radius:15px">
+		        </div>
+		    </center>
+
+		    <a href="#porcentajesPagina" style="text-decoration: none;" data-transition="pop">
+             <span class="boton"> Ejecutar </span>
+            </a>
+
+		</div>
+
+	</div>
+
+
+
+	<div data-role="page" id="porcentajesPagina">
+		<div data-role="content">
+
+			<h4> Escriba su máximo</h4>
+
+			<input type="text" id="maximo" value="" data-mini="true">
+
+			<h4> Escriba sus porcentajes (hasta 5 pesos)</h4>
+
+			<input type="text" id="porcentajes" placeholder="50,60,65,70,80" data-mini="true">
+
+			<br>
+			<button onclick="hacerCalculos()" data-theme="b">Hacer Cálculos</button>
+		</div>
+
+
+		<script type="text/javascript">
+
+			
+			function hacerCalculos(){
+
+				sacarLibrasLado();
+				sacarKilos();
+				sacarLibras();
+
+			}
+
+			function sacarLibrasLado(){
+
+				//sacando los valores
+
+				var maximo= document.getElementById('maximo').value;
+				var porcentajesTodos = document.getElementById('porcentajes').value;
+				var maximoLibras=maximo*2.205;
+
+
+
+				//convertir valores a arreglo
+				var arregloPorcentajes= porcentajesTodos.split(",")
+
+				primerPorcentaje=arregloPorcentajes[0];
+				segundoPorcentaje=arregloPorcentajes[1];
+				tercerPorcentaje=arregloPorcentajes[2];
+				cuartoPorcentaje=arregloPorcentajes[3];
+				quintoPorcentaje=arregloPorcentajes[4];
+
+				
+ 		        //haciendo los cálculos
+				var libraLado1= (((arregloPorcentajes[0]/100)*maximoLibras)-45)/2;
+				var libraLado2= (((arregloPorcentajes[1]/100)*maximoLibras)-45)/2;
+				var libraLado3= (((arregloPorcentajes[2]/100)*maximoLibras)-45)/2;
+				var libraLado4= (((arregloPorcentajes[3]/100)*maximoLibras)-45)/2;
+				var libraLado5= (((arregloPorcentajes[4]/100)*maximoLibras)-45)/2;
+                
+                //Iimprimiendo el resultado
+				document.getElementById("uno").innerHTML = libraLado1.toFixed(1);
+				document.getElementById("dos").innerHTML = libraLado2.toFixed(1);
+				document.getElementById("tres").innerHTML = libraLado3.toFixed(1);
+				document.getElementById("cuatro").innerHTML = libraLado4.toFixed(1);
+				document.getElementById("cinco").innerHTML = libraLado5.toFixed(1);
+			}
+
+
+		function sacarKilos(){
+							//sacando los valores
+
+				var maximo= document.getElementById('maximo').value;
+				var porcentajesTodos = document.getElementById('porcentajes').value;
+
+
+				//convertir valores a arreglo
+				var arregloPorcentajes= porcentajesTodos.split(",")
+
+				primerPorcentaje=arregloPorcentajes[0];
+				segundoPorcentaje=arregloPorcentajes[1];
+				tercerPorcentaje=arregloPorcentajes[2];
+				cuartoPorcentaje=arregloPorcentajes[3];
+				quintoPorcentaje=arregloPorcentajes[4];
+
+				
+ 		        //haciendo los cálculos
+				var kilo1= (arregloPorcentajes[0]/100)*maximo;
+				var kilo2= (arregloPorcentajes[1]/100)*maximo;
+				var kilo3= (arregloPorcentajes[2]/100)*maximo;
+				var kilo4= (arregloPorcentajes[3]/100)*maximo;
+				var kilo5= (arregloPorcentajes[4]/100)*maximo;
+                
+                //Iimprimiendo el resultado
+				document.getElementById("unoK").innerHTML = kilo1.toFixed(1);
+				document.getElementById("dosK").innerHTML = kilo2.toFixed(1);
+				document.getElementById("tresK").innerHTML = kilo3.toFixed(1);
+				document.getElementById("cuatroK").innerHTML = kilo4.toFixed(1);
+				document.getElementById("cincoK").innerHTML = kilo5.toFixed(1);
+
+		}
+
+		function sacarLibras(){
+							//sacando los valores
+
+				var maximo= document.getElementById('maximo').value;
+				var porcentajesTodos = document.getElementById('porcentajes').value;
+				var maximoLibras=maximo*2.205;
+
+
+				//convertir valores a arreglo
+				var arregloPorcentajes= porcentajesTodos.split(",")
+
+				primerPorcentaje=arregloPorcentajes[0];
+				segundoPorcentaje=arregloPorcentajes[1];
+				tercerPorcentaje=arregloPorcentajes[2];
+				cuartoPorcentaje=arregloPorcentajes[3];
+				quintoPorcentaje=arregloPorcentajes[4];
+
+				
+ 		        //haciendo los cálculos
+				var libra1= (arregloPorcentajes[0]/100)*maximoLibras;
+				var libra2= (arregloPorcentajes[1]/100)*maximoLibras;
+				var libra3= (arregloPorcentajes[2]/100)*maximoLibras;
+				var libra4= (arregloPorcentajes[3]/100)*maximoLibras;
+				var libra5= (arregloPorcentajes[4]/100)*maximoLibras;
+                
+                //Iimprimiendo el resultado
+				document.getElementById("unoL").innerHTML = libra1.toFixed(1);
+				document.getElementById("dosL").innerHTML = libra2.toFixed(1);
+				document.getElementById("tresL").innerHTML = libra3.toFixed(1);
+				document.getElementById("cuatroL").innerHTML = libra4.toFixed(1);
+				document.getElementById("cincoL").innerHTML = libra5.toFixed(1);
+
+		}
+		</script>
+
+ <div data-role="collapsible-set" data-theme="c">
+    <div data-role="collapsible">
+    	<h1> Libras por Lado </h1>
+    	<ul>
+    		<li>Primer Peso <p id="uno"> hola<p1></li>
+			<li>Segundo Peso <p id="dos"> hola<p1></li>
+			<li>Tercero Peso <p id="tres"> hola<p1></li>
+			<li>Cuarto Peso <p id="cuatro"> hola<p1></li>
+			<li>Quinto Peso <p id="cinco"> hola<p1></li>
+    	</ul>
+    </div>
+
+    <div data-role="collapsible">
+    	<h1> Pesos en Kilos </h1>
+    	<ul>
+    		<li>Primer Peso <p id="unoK"> hola<p1></li>
+			<li>Segundo Peso <p id="dosK"> hola<p1></li>
+			<li>Tercer Peso <p id="tresK"> hola<p1></li>
+			<li>Cuarto Peso <p id="cuatroK"> hola<p1></li>
+			<li>Quinto Peso <p id="cincoK"> hola<p1></li>
+    	</ul>
+    	<br><br>
+    </div>
+    
+    <div data-role="collapsible">
+    	<h1> Pesos en Libras </h1>
+    	<ul>
+    		<li>Primer Peso <p id="unoL"> hola<p1></li>
+			<li>Segundo Peso <p id="dosL"> hola<p1></li>
+			<li>Tercer Peso <p id="tresL"> hola<p1></li>
+			<li>Cuarto Peso <p id="cuatroL"> hola<p1></li>
+			<li>Quinto Peso <p id="cincoL"> hola<p1></li>
+    	</ul>
+    	<br><br>
+    </div>
+
+
+</div>
+
+
+	</div> <!-- aqui termina la pagina de porcentajes-->
+
+
+
+</body>
+
+<style>
+.boton{
+  background: #00b7f8;
+  border-bottom: 5px solid #0045a6;
+  border-radius: 12px;
+  box-shadow: 6px 6px 6px #999;
+  color: #fff;
+  cursor: pointer;
+  display: block;  
+  font-family: 'Raleway', Arial, Helvetica;
+  font-size: 22px;
+  height: 22px;
+  margin: 80px auto;
+  padding: 20px 20px;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  width: 120px;
+
+}
+.boton:hover{
+	background: #0096f7;
+}
+.boton:active {
+	box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
+	border-bottom:1px solid #0045A6;
+  text-shadow:  0px 0px 5px #fff, 0px 0px 5px #fff;
+	transform: translateY(4px);
+  transition: all 0.1s ease 0s;
+  margin: 80px auto 76px auto;
+}
+</style>
+
+
+</html>
