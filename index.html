@@ -49,11 +49,11 @@
 
 			<h4> Máximos (Armando, Ramon)</h4>
 
-			<input type="text" id="maximo" value="" data-mini="true" placeholder="80,90">
+			<input type="text" id="maximo" value="" data-mini="true" placeholder="">
 
 			<h4> Escriba sus porcentajes (hasta 5 pesos)</h4>
 
-			<input type="text" id="porcentajes" placeholder="50,60,65,70,80" data-mini="true">
+			<input type="text" id="porcentajes" placeholder="" data-mini="true">
 
 			<br>
 			<button onclick="hacerCalculos()" data-theme="b">Hacer Cálculos</button>
@@ -121,11 +121,11 @@
 				var libraLado10= (((arregloPorcentajes[4]/100)*maximoLibrasRamon)-45)/2;
                 
                 //Iimprimiendo el resultado
-				document.getElementById("uno").innerHTML = libraLado1.toFixed(1)+ " Armando" + " - " + libraLado6.toFixed(1) + " Ramón";
-				document.getElementById("dos").innerHTML = libraLado2.toFixed(1)+ " Armando" + " - " +libraLado7.toFixed(1) + " Ramón";
-				document.getElementById("tres").innerHTML = libraLado3.toFixed(1)+ " Armando" +" - " +  libraLado8.toFixed(1) + " Ramón";
-				document.getElementById("cuatro").innerHTML = libraLado4.toFixed(1)+ " Armando" +" - " +  libraLado9.toFixed(1) + " Ramón";
-				document.getElementById("cinco").innerHTML = libraLado5.toFixed(1)+ " Armando" +" - " + libraLado10.toFixed(1) + " Ramón";
+				document.getElementById("uno").innerHTML = libraLado1.toFixed(1)+ " Arm" + " - " + libraLado6.toFixed(1) + " Ram";
+				document.getElementById("dos").innerHTML = libraLado2.toFixed(1)+ " Arm" + " - " +libraLado7.toFixed(1) + " Ram";
+				document.getElementById("tres").innerHTML = libraLado3.toFixed(1)+ " Arm" +" - " +  libraLado8.toFixed(1) + " Ram";
+				document.getElementById("cuatro").innerHTML = libraLado4.toFixed(1)+ " Arm" +" - " +  libraLado9.toFixed(1) + " Ram";
+				document.getElementById("cinco").innerHTML = libraLado5.toFixed(1)+ " Arm" +" - " + libraLado10.toFixed(1) + " Ram";
 			}
 
 
@@ -172,11 +172,11 @@
 
                 
                 //Iimprimiendo el resultado
-				document.getElementById("unoK").innerHTML = kilo1.toFixed(1) + " Armando" +" - " + kilo6.toFixed(1)+ " Ramón" ;
-				document.getElementById("dosK").innerHTML = kilo2.toFixed(1) + " Armando" +" - " + kilo7.toFixed(1)+ " Ramón" ;
-				document.getElementById("tresK").innerHTML = kilo3.toFixed(1) + " Armando" +" - " + kilo8.toFixed(1)+ " Ramón" ;
-				document.getElementById("cuatroK").innerHTML = kilo4.toFixed(1) + " Armando" +" - " + kilo9.toFixed(1)+ " Ramón" ;
-				document.getElementById("cincoK").innerHTML = kilo5.toFixed(1) + " Armando" +" - " + kilo10.toFixed(1)+ " Ramón" ;
+				document.getElementById("unoK").innerHTML = kilo1.toFixed(1) + " Arm" +" - " + kilo6.toFixed(1)+ " Ram" ;
+				document.getElementById("dosK").innerHTML = kilo2.toFixed(1) + " Arm" +" - " + kilo7.toFixed(1)+ " Ram" ;
+				document.getElementById("tresK").innerHTML = kilo3.toFixed(1) + " Arm" +" - " + kilo8.toFixed(1)+ " Ram" ;
+				document.getElementById("cuatroK").innerHTML = kilo4.toFixed(1) + " Arm" +" - " + kilo9.toFixed(1)+ " Ram" ;
+				document.getElementById("cincoK").innerHTML = kilo5.toFixed(1) + " Arm" +" - " + kilo10.toFixed(1)+ " Ram" ;
 
 		}
 
@@ -316,7 +316,7 @@
 }
 
 .fuente{
-	font-size: 15px;
+	font-size: 20px;
 }
 </style>
 
