@@ -256,6 +256,27 @@
 </div>
 -->
 
+	<div>
+		<center>
+		<h4>Libras por lado a kilos</h4>
+		
+		<input type="text" id="librasLado" placeholder="" data-mini="true">
+		<button onclick="sacarKilosDeLibra()" data-theme="b">Calcular Kilos</button>
+		<p>Kilos totales :</p> <p id="kilosTotales"> ---- </p>
+
+		</center>
+	</div>
+
+	<script type="text/javascript">
+	function sacarKilosDeLibra(){
+		var librasDeLado= document.getElementById('librasLado').value;
+		var resultado= ((librasDeLado*2) + 45)*0.454;
+		document.getElementById("kilosTotales").innerHTML = resultado.toFixed(1);
+
+	}
+
+	</script>
+
 
 	</div> <!-- aqui termina la pagina de porcentajes-->
 
