@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--Importar los iconos de google-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+
+</head>
+<body>
+  
+  <div class="container section">
+  	<div class="row">
+  		<form class="col s12">
+  			<div class="row card-panel">
+
+  				<div class="input-field col s4">
+            	<!--este es para un icono-->
+            	<i class="material-icons prefix">person_pin</i>
+            	<!--este es para un icono-->
+            	<input id="name" type="text" name="Nombre" class="validate" required="" aria-required="true">
+            	<label for="name">Escribe tu nombre</label>
+          		</div>
+		        
+
+		        <div class="input-field col s4" > <!--style="display:none"-->
+		        <i class="material-icons prefix">phone</i>
+		        <input id="etiqutaNumero" type="number" name="Telefono" class="validate" required="" aria-required="true">
+		        <!--el label for= es para que al dar click se haga chiquita las letras-->
+		        <label for="etiqutaNumero"data-error="error" data-success="correcto" >Número de Teléfono</label>
+		        <!--el label for= es para que al dar click se haga chiquita las letras-->
+		        </div>
+
+
+		        <div class="input-field col s4">
+		        <i class="material-icons prefix">email</i>
+		        <!--el "validate" en la class es para ponerse rojo cuando no cumpla con los requisitos-->
+		        <input id="etiqueta" type="email" name="Email" class="validate" required="true" aria-required="true">
+		        <label for="etiqueta" data-error="error" data-success="correcto">Dirección de Correo</label>
+		        </div>
+
+
+
+
+
+  				<div class="input-field col s6">
+            	<!--este es para un icono-->
+            	<i class="material-icons prefix">person_pin</i>
+            	<!--este es para un icono-->
+            	<input id="name" type="text" name="Nombre" class="validate" required="" aria-required="true">
+            	<label for="name">Escribe tu nombre</label>
+          		</div>
+		        
+
+		        <div class="input-field col s6" > <!--style="display:none"-->
+		        <i class="material-icons prefix">phone</i>
+		        <input id="etiqutaNumero" type="number" name="Telefono" class="validate" required="" aria-required="true">
+		        <!--el label for= es para que al dar click se haga chiquita las letras-->
+		        <label for="etiqutaNumero"data-error="error" data-success="correcto" >Número de Teléfono</label>
+		        <!--el label for= es para que al dar click se haga chiquita las letras-->
+		        </div>
+
+
+		        <div class="input-field col s6">
+		        <i class="material-icons prefix">email</i>
+		        <!--el "validate" en la class es para ponerse rojo cuando no cumpla con los requisitos-->
+		        <input id="etiqueta" type="email" name="Email" class="validate" required="true" aria-required="true">
+		        <label for="etiqueta" data-error="error" data-success="correcto">Dirección de Correo</label>
+		        </div>
+
+
+		        <div  class="input-field col s6">
+					<center>
+		        	<p>
+		        	<label>
+		        	<input type="checkbox" name="">
+		        	<span>Rojo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </span>
+		        	</label>
+
+		        	<label>
+		        	<input type="checkbox" checked="checked" name="">
+		        	<span>Azul &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    </span>
+		        	</label>
+
+		        	<label>
+		        	<input type="checkbox" checked="checked" name="">
+		        	<span>Azul</span>
+		        	</label>
+
+		        	</p>
+
+		        	<p>
+		        	<label>
+		        	<input type="checkbox" name="">
+		        	<span>Rojo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+		        	<label>
+		        	<input type="checkbox" checked="checked" name="">
+		        	<span>Azul &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+
+		        	<label>
+		        	<input type="checkbox" name="">
+		        	<span>Rojo</span>
+		        	</label>	
+		        	</p>
+
+		        	</center>		        		        			        	
+		        </div>
+
+		        <div  class="input-field col s6">
+
+		        	<p>
+		        	<label>
+		        	<input type="radio" name="grupo1">
+		        	<span>Rojo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+		        	<label>
+		        	<input type="radio" checked="checked" name="grupo1">
+		        	<span>Azul &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+
+		        	<label>
+		        	<input type="radio" name="grupo1">
+		        	<span>Rojo</span>
+		        	</label>	
+		        	</p>
+
+		        	<p>
+		        	<label>
+		        	<input type="radio" name="grupo2">
+		        	<span>Rojo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+		        	<label>
+		        	<input type="radio" checked="checked" name="grupo2">
+		        	<span>Azul &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+		        	</label>
+
+
+		        	<label>
+		        	<input type="radio" name="grupo2">
+		        	<span>Rojo</span>
+		        	</label>	
+		        	</p>
+		        </div>
+
+	        
+
+  			</div> <!--tarjeta fin-->
+  		</form>
+  	</diV>
+  </div>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</body>
+</html>
