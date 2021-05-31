@@ -19,10 +19,24 @@
 
    <!-- Inicializar ciertos elementos con jquery-->
    <script type="text/javascript">
-
+   // inicializar select
    	$(document).ready(function(){
     $('select').formSelect();
 	});
+
+
+	// inicializar fecha
+	$(document).ready(function(){
+    $('.datepicker').datepicker({
+    	setDefaultDate: true,
+    	defaultDate: new Date(),
+    });
+  	});
+
+  	//inicializar hora
+  	  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
       
    </script>
 
@@ -223,6 +237,17 @@
  					 </div>
 			  	</div>
 
+			  	<div class="input-field col s12 m6 l6">
+			  	<label>Fecha</label>
+			  		<input type="text" class="datepicker">
+			  		
+			  	</div>
+
+			  	<div class="input-field col s12 m6 l6">
+			  	<label>Hora</label>
+			  		<input type="text" class="timepicker">			  		
+			  	</div>
+
 
 		        <div class="row">
 		          <div class="file-field input-field col s12">
@@ -236,15 +261,17 @@
 		            </div>
 		          </div>
 		        </div>
+
+		        
         
 
 
 
-			  		<div class="input-field col s12 m12 l12" >
-			  		<center>
-			  		<button class="btn" type="submit">Enviar</button>
-			  		</center>
-			  		</div>
+			  	<div class="input-field col s12 m12 l12" >
+			  	<center>
+			  	<input class="btn" type="submit"></input>
+			  	</center>
+			  	</div>
 
 
 
